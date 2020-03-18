@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+    let a =parseInt(prompt('nhập vào một số để lập ma trận '))
+    console.log(a)
+    let board = [];
+    let kq = 0
+    for (let i = 0; i < 5; i++) {
+        board[i] = new Array(a, a, a, a, a);
+    }
+    for (j=0; j<board.length; j++){
+        kq += board[j][j]
+    }
+    document.write(' Tổng đường chéo của ma trận vuông là: ' + kq)
+    console.log(kq)
+    console.log(board)
+</script>
+</body>
+</html>
