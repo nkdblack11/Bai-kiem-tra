@@ -6,19 +6,40 @@
 </head>
 <body>
 <script language="JavaScript">
-    let a =parseInt(prompt('nhập vào một số để lập ma trận '))
-    console.log(a)
-    let board = [];
-    let kq = 0
-    for (let i = 0; i < 5; i++) {
-        board[i] = new Array(a, a, a, a, a);
+
+    let n = parseInt(prompt('Nhập vào một số để khởi tạo ma trận vuông: '))
+
+    function tao_ma_tran(so) {
+        const matran = new Array()
+        for (let i = 0; i < so; i++) {
+            matran[i] = new Array()
+            for (let j = 0; j < so; j++) {
+                let a = parseInt(prompt('nhập số tại hàng ' + i + ' và cột ' + j + ' của ma trận '))
+                matran[i][j] = a
+                document.write(a + ' ')
+            }
+            document.write('<br/>')
+        }
+        return matran
     }
-    for (j=0; j<board.length; j++){
-        kq += board[j][j]
+
+    function tinh_duong_cheo(ma_tran) {
+        let kq = 0
+        for (let i = 0; i < ma_tran.length; i++) {
+            let j = ma_tran.length - 1 - i
+            if (i == j) {
+                kq += ma_tran[i][i]
+            } else {
+                kq += ma_tran[i][i] + ma_tran[i][j]
+            }
+        }
+        return kq
     }
-    document.write(' Tổng đường chéo của ma trận vuông là: ' + kq)
-    console.log(kq)
-    console.log(board)
+
+    let matran = tao_ma_tran(n)
+    let tong_duong_cheo = tinh_duong_cheo(matran)
+    document.write('<br/>')
+    document.write('Tổng của đường chéo chính trong ma trận vừa nhập là: ' + tong_duong_cheo)
 </script>
 </body>
 </html>
