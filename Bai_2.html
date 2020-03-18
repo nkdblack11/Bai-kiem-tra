@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm tính tổng các số lẻ trong mảng</title>
+</head>
+<body>
+<script language="JavaScript">
+    let kq = 0
+    function tinh_tong_so_le() {
+        for (let i = 0; i <= so.length-1; i++) {
+            if (so[i] % 2 != 0) {
+                kq += so[i]
+            }
+        }
+        return kq
+    }
+    let so = [2, 5, 15, 24, 17, 20, 6, 9];
+    tinh_tong_so_le(so)
+    document.write('Tổng của các số lẻ trong mảng là: ' + kq)
+</script>
+</body>
+</html>
