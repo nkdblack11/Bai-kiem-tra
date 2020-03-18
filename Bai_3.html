@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tuổi của một người</title>
+    <script language="JavaScript">
+        let kq = 0
+        function tinh_tuoi(nam) {
+            let a = parseInt(nam)
+            if (a < 2020){
+                kq = 2020 - a
+                document.getElementById('xuat').innerHTML = 'Số tuổi của bạn là: ' + kq
+            }else {
+                document.getElementById('xuat').innerHTML = 'Nhập lại năm'
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Tính tuổi</h1>
+<h3>Nhập năm sinh chủa bạn:</h3>
+<input id="nam" type="text"/>
+<button type="button" onclick="tinh_tuoi(nam.value)">Tính</button>
+<div id="xuat" style="color: blue"></div>
+</body>
+</html>
