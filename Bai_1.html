@@ -5,6 +5,7 @@
     <title>Hiển thị các số nguyên tố</title>
 </head>
 <body>
+<h3>Tìm số nguyên tố trong khoảng từ 1 tới số nhập</h3>
 Enter a number <input id="so" type="text"/>
 <button type="button" onclick="xuat.innerHTML=lap(so.value)">Click</button>
 <div id="xuat"></div>
@@ -33,11 +34,8 @@ Enter a number <input id="so" type="text"/>
                 dayso += (kq + ",")
                 j++;
             }
-            if (j >= 20) {
-                return '20 số nguyên tố đầu tiên là: ' + dayso
-            }
         }
-        return 'dãy số nguyên tố là: ' + dayso
+        return 'Dãy số nguyên tố là: ' + dayso
     }
 </script>
 </body>
