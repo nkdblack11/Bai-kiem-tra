@@ -26,12 +26,12 @@
     function tinh_duong_cheo(ma_tran) {
         let kq = 0
         for (let i = 0; i < ma_tran.length; i++) {
-            let j = ma_tran.length - 1 - i
-            if (i == j) {
+            // let j = ma_tran.length - 1 - i
+            // if (i == j) {
                 kq += ma_tran[i][i]
-            } else {
-                kq += ma_tran[i][i] + ma_tran[i][j]
-            }
+            // } else {
+            //     kq += ma_tran[i][i] + ma_tran[i][j]
+            // }
         }
         return kq
     }
